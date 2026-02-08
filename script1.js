@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // =====================================================
 // AutoHub Kenya - JavaScript Functionality
 // Cookie Management, Search/Filter, Form Validation
@@ -813,3 +814,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+=======
+const registrationForm = document.querySelector("#registrationForm");
+const name = document.querySelector("#name");
+const age  = document.querySelector("#age");
+const password = document.querySelector("#password");
+const output = document.querySelector("#output");
+registrationForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    output.innerHTML = `<h3>Student Details</h3>
+    <marquee behavior="slide" direction="" scrollamount="8">
+        <p><span>Name:</span> ${name.value}</p>
+        <p><strong>Age:</strong> ${age.value}</p>
+        <p><strong>Registration Number:</strong> ${password.value}</p>
+    </marquee>
+    `;
+});
+>>>>>>> e930971d7c03a9c0ff8bb29312328aeb9d7576a8
