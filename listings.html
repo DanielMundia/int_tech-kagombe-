@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Cars - AutoHub Kenya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>AutoHub<span class="accent">KE</span></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html" class="active">Browse Cars</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="index.html#privacy">Privacy</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search & Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <h2 class="page-title">Browse Our Collection</h2>
+            
+            <div class="search-filter-wrapper">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by make, model, or keyword..." class="search-input">
+                    <button onclick="searchCars()" class="search-btn">🔍 Search</button>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter" onchange="filterCars()">
+                            <option value="all">All Categories</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="truck">Truck</option>
+                            <option value="hatchback">Hatchback</option>
+                            <option value="coupe">Coupe</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="priceFilter">Price Range:</label>
+                        <select id="priceFilter" onchange="filterCars()">
+                            <option value="all">All Prices</option>
+                            <option value="0-1000000">Under KES 1M</option>
+                            <option value="1000000-2500000">KES 1M - 2.5M</option>
+                            <option value="2500000-5000000">KES 2.5M - 5M</option>
+                            <option value="5000000-999999999">Above KES 5M</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="yearFilter">Year:</label>
+                        <select id="yearFilter" onchange="filterCars()">
+                            <option value="all">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="older">Older</option>
+                        </select>
+                    </div>
+
+                    <button onclick="resetFilters()" class="reset-btn">Reset Filters</button>
+                </div>
+            </div>
+
+            <!-- Results Counter -->
+            <div class="results-info">
+                <p id="resultsCount">Loading vehicles...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listings Grid -->
+    <section class="listings-section">
+        <div class="container">
+            <div class="product-grid" id="allProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <h3>No vehicles found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+                <button onclick="resetFilters()" class="btn-primary">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoHub<span class="accent">KE</span></h3>
+                    <p>Kenya's trusted car marketplace, committed to privacy and ethical practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Browse Cars</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="index.html#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal Compliance</h4>
+                    <ul>
+                        <li>Data Protection Act (2019)</li>
+                        <li>Computer Misuse & Cybercrimes Act (2018)</li>
+                        <li>National ICT Policy (2019)</li>
+                        <li>ODPC Guidelines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoHub Kenya. All rights reserved. | Compliant with Kenya's Data Protection Laws</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoHub Kenya - Premium Car Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-banner">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your browsing experience and analyze site traffic in compliance with Kenya's Data Protection Act (2019). <a href="#privacy">Learn more</a></p>
+            <button onclick="acceptCookies()" class="btn-accept">Accept</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>AutoHub<span class="accent">KE</span></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="listings.html">Browse Cars</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">Find Your Perfect Ride</h2>
+                <p class="hero-subtitle">Kenya's trusted marketplace for quality vehicles</p>
+                <a href="listings.html" class="btn-primary">Explore Cars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="sedan">
+                    <div class="category-icon">🚗</div>
+                    <h3>Sedans</h3>
+                    <p>Comfort & Style</p>
+                </div>
+                <div class="category-card" data-category="suv">
+                    <div class="category-icon">🚙</div>
+                    <h3>SUVs</h3>
+                    <p>Space & Power</p>
+                </div>
+                <div class="category-card" data-category="luxury">
+                    <div class="category-icon">🏎️</div>
+                    <h3>Luxury</h3>
+                    <p>Premium Experience</p>
+                </div>
+                <div class="category-card" data-category="truck">
+                    <div class="category-icon">🚚</div>
+                    <h3>Trucks</h3>
+                    <p>Heavy Duty</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings -->
+    <section class="featured-listings">
+        <div class="container">
+            <h2 class="section-title">Featured Vehicles</h2>
+            <div class="product-grid" id="featuredProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+            <div class="view-all-container">
+                <a href="listings.html" class="btn-secondary">View All Listings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why AutoHub Kenya</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>Your data protected under Kenya's Data Protection Act (2019)</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Verified Sellers</h3>
+                    <p>All dealers and private sellers thoroughly vetted</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Fair Pricing</h3>
+                    <p>Transparent market rates, no hidden fees</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Easy Contact</h3>
+                    <p>Connect directly with sellers safely</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Notice Section -->
+    <section id="privacy" class="privacy-section">
+        <div class="container">
+            <h2 class="section-title">Privacy Notice</h2>
+            <div class="privacy-content">
+                <p><strong>Data Controller:</strong> AutoHub Kenya Limited</p>
+                
+                <h3>Information We Collect</h3>
+                <p>In compliance with the Data Protection Act (2019), we collect and process the following personal data:</p>
+                <ul>
+                    <li>Name, email address, and phone number (for registration)</li>
+                    <li>Vehicle preferences and search history (to improve your experience)</li>
+                    <li>Cookies for session management and analytics</li>
+                </ul>
+
+                <h3>Legal Basis for Processing</h3>
+                <p>We process your data based on:</p>
+                <ul>
+                    <li>Your explicit consent when registering</li>
+                    <li>Legitimate business interests in providing marketplace services</li>
+                    <li>Compliance with legal obligations under Kenyan law</li>
+                </ul>
+
+                <h3>Your Rights</h3>
+                <p>Under the Data Protection Act (2019), you have the right to:</p>
+                <ul>
+                    <li>Access your personal data</li>
+                    <li>Correct inaccurate data</li>
+                    <li>Delete your data (right to be forgotten)</li>
+                    <li>Object to processing</li>
+                    <li>Lodge a complaint with the Office of the Data Protection Commissioner (ODPC)</li>
+                </ul>
+
+                <h3>Data Security</h3>
+                <p>We implement appropriate technical and organizational measures as required by the Computer Misuse and Cybercrimes Act (2018) to protect your data from unauthorized access, alteration, or disclosure.</p>
+
+                <h3>Contact Us</h3>
+                <p>For privacy concerns, contact our Data Protection Officer at: <strong>dpo@autohubke.com</strong></p>
+                <p>Office of the Data Protection Commissioner: <a href="https://www.odpc.go.ke" target="_blank">www.odpc.go.ke</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoHub<span class="accent">KE</span></h3>
+                    <p>Kenya's trusted car marketplace, committed to privacy and ethical practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Browse Cars</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal Compliance</h4>
+                    <ul>
+                        <li>Data Protection Act (2019)</li>
+                        <li>Computer Misuse & Cybercrimes Act (2018)</li>
+                        <li>National ICT Policy (2019)</li>
+                        <li>ODPC Guidelines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoHub Kenya. All rights reserved. | Compliant with Kenya's Data Protection Laws</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

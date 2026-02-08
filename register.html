@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AutoHub Kenya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>AutoHub<span class="accent">KE</span></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">Browse Cars</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="index.html#privacy">Privacy</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Section -->
+    <section class="register-section">
+        <div class="container">
+            <div class="register-wrapper">
+                <div class="register-info">
+                    <h2>Join AutoHub Kenya</h2>
+                    <p>Create an account to buy or sell vehicles on Kenya's most trusted car marketplace.</p>
+                    
+                    <div class="benefits-list">
+                        <h3>Member Benefits:</h3>
+                        <ul>
+                            <li>✓ Save favorite vehicles</li>
+                            <li>✓ Get instant alerts on new listings</li>
+                            <li>✓ Contact sellers directly</li>
+                            <li>✓ List your own vehicles</li>
+                            <li>✓ Manage your profile securely</li>
+                        </ul>
+                    </div>
+
+                    <div class="privacy-notice-box">
+                        <h4>🔒 Your Privacy Matters</h4>
+                        <p>We protect your data in compliance with Kenya's <strong>Data Protection Act (2019)</strong>. Your information is encrypted and never shared without consent.</p>
+                    </div>
+                </div>
+
+                <div class="register-form-container">
+                    <h3>Create Your Account</h3>
+                    <form id="registerForm" onsubmit="handleRegistration(event)" novalidate>
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <span class="error-message" id="fullNameError"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="0712345678" required>
+                            <span class="error-message" id="phoneError"></span>
+                            <small>Format: 07XXXXXXXX or 01XXXXXXXX</small>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password">Password <span class="required">*</span></label>
+                            <input type="password" id="password" name="password" required>
+                            <span class="error-message" id="passwordError"></span>
+                            <small>Minimum 8 characters, include uppercase, lowercase, and number</small>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <span class="error-message" id="confirmPasswordError"></span>
+                        </div>
+
+                        <!-- Account Type -->
+                        <div class="form-group">
+                            <label for="accountType">I am a: <span class="required">*</span></label>
+                            <select id="accountType" name="accountType" required>
+                                <option value="">Select account type</option>
+                                <option value="buyer">Buyer</option>
+                                <option value="seller">Seller</option>
+                                <option value="both">Both Buyer & Seller</option>
+                            </select>
+                            <span class="error-message" id="accountTypeError"></span>
+                        </div>
+
+                        <!-- Terms & Conditions -->
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="termsAccept" name="termsAccept" required>
+                                <span>I agree to the <a href="index.html#privacy" target="_blank">Terms & Conditions</a> and <a href="index.html#privacy" target="_blank">Privacy Policy</a> <span class="required">*</span></span>
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+
+                        <!-- Data Processing Consent -->
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="dataConsent" name="dataConsent" required>
+                                <span>I consent to the processing of my personal data as outlined in the Privacy Notice (Data Protection Act, 2019) <span class="required">*</span></span>
+                            </label>
+                            <span class="error-message" id="dataConsentError"></span>
+                        </div>
+
+                        <!-- Marketing Consent (Optional) -->
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="marketingConsent" name="marketingConsent">
+                                <span>I would like to receive updates and promotional offers (optional)</span>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-primary btn-full">Create Account</button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <h3>✓ Registration Successful!</h3>
+                        <p>Your account has been created. Welcome to AutoHub Kenya!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoHub<span class="accent">KE</span></h3>
+                    <p>Kenya's trusted car marketplace, committed to privacy and ethical practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Browse Cars</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="index.html#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal Compliance</h4>
+                    <ul>
+                        <li>Data Protection Act (2019)</li>
+                        <li>Computer Misuse & Cybercrimes Act (2018)</li>
+                        <li>National ICT Policy (2019)</li>
+                        <li>ODPC Guidelines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoHub Kenya. All rights reserved. | Compliant with Kenya's Data Protection Laws</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
